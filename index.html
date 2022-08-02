@@ -31,7 +31,11 @@
     <script src="wasmFeatureDetect.js"></script>
 
     <script type='text/javascript'>
-        var Module = {};
+        var Module = {
+            locateFile(filename) {
+                return './assets/' + filename;
+            }
+        };
 
         var has_simd;
         var has_threads;
