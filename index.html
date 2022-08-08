@@ -33,7 +33,7 @@
     <script type='text/javascript'>
         var Module = {
             locateFile(filename) {
-                return './assets/' + filename;
+                return './public/' + filename;
             }
         };
 
@@ -81,8 +81,8 @@
 
                 console.log('load ' + yolov5_module_name);
 
-                var yolov5wasm = 'assets/' + yolov5_module_name + '.wasm';
-                var yolov5js = 'assets/' + yolov5_module_name + '.js';
+                var yolov5wasm = 'public/' + yolov5_module_name + '.wasm';
+                var yolov5js = 'public/' + yolov5_module_name + '.js';
 
                 fetch(yolov5wasm)
                     .then(response => response.arrayBuffer())
