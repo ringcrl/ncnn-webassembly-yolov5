@@ -14,17 +14,13 @@ source ~/Documents/saga/emsdk/emsdk_env.sh
 mkdir build
 cd build
 
-cmake -DCMAKE_TOOLCHAIN_FILE=$EMSDK/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake -DWASM_FEATURE=basic ..
-make -j8
+wasm_feature=basic
+wasm_feature=simd
+wasm_feature=threads
+wasm_feature=simd-threads
 
-cmake -DCMAKE_TOOLCHAIN_FILE=$EMSDK/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake -DWASM_FEATURE=simd ..
+cmake -DCMAKE_TOOLCHAIN_FILE=$EMSDK/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake -DWASM_FEATURE=$wasm_feature ..
 make -j8
+mv yolov5-$wasm_feature.js yolov5-$wasm_feature.data yolov5-$wasm_feature.wasm ../public/
 
-cmake -DCMAKE_TOOLCHAIN_FILE=$EMSDK/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake -DWASM_FEATURE=threads ..
-make -j8
-
-cmake -DCMAKE_TOOLCHAIN_FILE=$EMSDK/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake -DWASM_FEATURE=simd-threads ..
-make -j8
-
-# TODO: 统一脚本
 ```
