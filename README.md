@@ -1,5 +1,7 @@
 # ncnn-webassembly-yolov5
 
+## 编译
+
 ```sh
 # emscripten
 # 只能是这个版本，低了 404，高了 error: undefined symbol
@@ -14,3 +16,7 @@ source ~/Documents/saga/emsdk/emsdk_env.sh
 ./build.sh
 
 ```
+
+## 运行
+
+VSC live server

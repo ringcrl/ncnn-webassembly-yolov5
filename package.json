@@ -1,0 +1,22 @@
+{
+  "name": "ncnn-webassembly-yolov5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ringcrl/ncnn-webassembly-yolov5.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ringcrl/ncnn-webassembly-yolov5/issues"
+  },
+  "homepage": "https://github.com/ringcrl/ncnn-webassembly-yolov5#readme",
+  "devDependencies": {
+    "ts-standard": "^11.0.0"
+  }
+}
