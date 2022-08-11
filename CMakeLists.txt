@@ -2,7 +2,7 @@ project(ncnn-webassembly-yolov5)
 
 cmake_minimum_required(VERSION 3.10)
 
-set(CMAKE_BUILD_TYPE release)
+set(CMAKE_BUILD_TYPE Debug)
 
 if(NOT WASM_FEATURE)
     message(FATAL_ERROR "You must pass cmake option -DWASM_FEATURE and possible values are basic, simd, threads and simd-threads")

@@ -1,4 +1,4 @@
-const Module = {
+Module = {
   locateFile (filename) {
     return './public/' + filename
   }
